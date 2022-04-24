@@ -42,13 +42,13 @@ with open(inputfile,'r') as i:
             con,posi = rm.binarySearch(refile, 0, len(block_dict)-1, mylist, block_dict)
             if con == 'in':
                 out = rm.outputline(refile, [posi], mylist, block_dict, rev_spec)
-                if out != 'no match\n':
+                if out != 'no_match\n':
                     final_line = index + '\t' + out
                     o.write(final_line)
             if con in ['ovlow','ovhigh','out']:
                 posilist = rm.contSearch(refile, con, posi, mylist, block_dict)
                 out = rm.outputline(refile, posilist, mylist, block_dict, rev_spec)
-                if out != 'no match\n':
+                if out != 'no_match\n':
                     final_line = ''
                     for eachline in out.split('\n'):
                         if eachline != '':
