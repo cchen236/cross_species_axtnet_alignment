@@ -1,1 +1,2 @@
-
+base_module.py & base_run.py for summit input
+region_module.py & region_run.py for region input and compute the percentage of same acid
